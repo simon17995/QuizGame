@@ -510,6 +510,6 @@ void edit_score(float score, char plnm[20])
 	if (score>=sc)
 	  { sc=score;
 	    fclose(f);
-	    f=fopen("score.txt","w");
+	    f=fopen("file.txt","w");
 	    fprintf(f,"%s\n%.2f",plnm,sc);
 	    fclose(f);}}
