@@ -465,7 +465,7 @@ void show_record()
 	char name[20];
 	float scr;
 	FILE *f;
-	f=fopen("score.txt","r");
+	f=fopen("file.txt","r");
 	fscanf(f,"%s%f",&name,&scr);
 	printf("\n\n\t\t*************************************************************");
 	printf("\n\n\t\t %s has secured the Highest Score %0.2f",name,scr);
@@ -478,7 +478,7 @@ void reset_score()
     float sc;
 	char nm[20];
 	FILE *f;
-	f=fopen("score.txt","r+");
+	f=fopen("file.txt","r+");
 	fscanf(f,"%s%f",&nm,&sc);
 	sc=0;
 	fprintf(f,"%s,%.2f",nm,sc);
@@ -505,7 +505,7 @@ void edit_score(float score, char plnm[20])
 	float sc;
 	char nm[20];
 	FILE *f;
-	f=fopen("score.txt","r");
+	f=fopen("file.txt","r");
 	fscanf(f,"%s%f",&nm,&sc);
 	if (score>=sc)
 	  { sc=score;
